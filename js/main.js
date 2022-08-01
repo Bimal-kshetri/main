@@ -352,7 +352,7 @@ function ValidateCv() {
 	return true;
 };
 var typed = new Typed(".typing", {
-	strings: ["Developer", "YouTuber", "Blogger"],
+	strings: ["Coder", "YouTuber", "Blogger"],
 	typeSpeed: 130,
 	backSpeed: 60,
 	loop: true
