@@ -335,6 +335,43 @@ AOS.init({
 				document.getElementById("dis1").style.display = "block";
 			}
 		});
+
+		$(window).resize(function () {
+			var $w = $(this),
+				width = $w.width(),
+				mainC = $('.hel1'),
+				child1 = $('.hel2'),
+				childC2 = $('.hel3');
+			if (width < 780) {
+				if (mainC.hasClass('col')) {
+					mainC.removeClass('col');
+					mainC.addClass('col-auto');
+
+				}
+				if (childC2.hasClass('col-auto')) {
+					childC2.removeClass('col-auto');
+					childC2.addClass('col');
+
+				}
+				document.getElementById("dis1").style.display = "none";
+				document.getElementById("dis2").style.display = "block";
+			}
+
+			if (width > 780) {
+				if (mainC.hasClass('col-auto')) {
+					mainC.removeClass('col-auto');
+					mainC.addClass('col');
+
+				}
+				if (child1.hasClass('col')) {
+					child1.removeClass('col');
+					child1.addClass('col-auto');
+
+				}
+				document.getElementById("dis2").style.display = "none";
+				document.getElementById("dis1").style.display = "block";
+			}
+		});
 	};
 	divv();
 
@@ -352,7 +389,7 @@ function ValidateCv() {
 	return true;
 };
 var typed = new Typed(".typing", {
-	strings: ["Coder", "YouTuber", "Blogger"],
+	strings: ["Coder", "YouTuber", "Blogger","learner"],
 	typeSpeed: 130,
 	backSpeed: 60,
 	loop: true
